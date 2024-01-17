@@ -1,0 +1,37 @@
+﻿@page
+@model Proiect_Cicioc_Daniela_Naomi.Pages.AnalizaCRUD.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Analiza</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Denumire_Analiza)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Denumire_Analiza)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Pret_Analiza)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Pret_Analiza)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Laboranti)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Laboranti.Nume_Laborant)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Analiza.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

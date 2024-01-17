@@ -1,0 +1,40 @@
+﻿@page
+@model Proiect_Cicioc_Daniela_Naomi.Pages.AnalizaCRUD.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Analiza</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Denumire_Analiza)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Denumire_Analiza)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Pret_Analiza)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Pret_Analiza)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Analiza.Laboranti)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Analiza.Laboranti.Nume_Laborant)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Analiza.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

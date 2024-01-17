@@ -1,0 +1,43 @@
+﻿@page
+@model Proiect_Cicioc_Daniela_Naomi.Pages.LaborantCRUD.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Laborant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Laborant.Nume_Laborant" class="control-label"></label>
+                <input asp-for="Laborant.Nume_Laborant" class="form-control" />
+                <span asp-validation-for="Laborant.Nume_Laborant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laborant.Salar_Laborant" class="control-label"></label>
+                <input asp-for="Laborant.Salar_Laborant" class="form-control" />
+                <span asp-validation-for="Laborant.Salar_Laborant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laborant.LaboratorID" class="control-label"></label>
+                <select asp-for="Laborant.LaboratorID" class ="form-control" asp-items="ViewBag.LaboratorID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
